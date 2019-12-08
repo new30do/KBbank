@@ -8,6 +8,21 @@ def play(request):
 def main(request):
     return render(request, 'index.html')
 
+from selenium import webdriver
+from time import sleep
+#자동화로 인터넷 등기소 검색
+def search(request):
+    driver = webdriver.Chrome('/Users/kang/PycharmProjects/kbBank/chromedriver2')
+    #driver.get('http://www.iros.go.kr/frontservlet?cmd=RISUWelcomeViewC')
+    driver.get('http://www.iros.go.kr/PMainJ.jsp')
+    sleep(3.0)
+    driver.find_element_by_xpath('//*[@id="cenS"]/div/ul/li[1]/div/ul/li[1]/a/strong').click()
+    sleep(3.0)
+    driver.find_element_by_name('txt_simple_address').send_keys('서울시 영등포구 당산로 20길 5-1')
+    sleep(3.0)
+    driver.find_element_by_xpath('//*[@id="btnSrchSojae"]').click()
+    return
+
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import HTMLConverter
 from pdfminer.converter import TextConverter

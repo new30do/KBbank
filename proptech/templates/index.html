@@ -75,7 +75,7 @@
       <!-- Masthead Subheading -->
       <p class="masthead-subheading text-uppercase mb-0">매물탐색에서부터 전입신고까지 도와드려요</p>
       <div class="s002">
-      <form method="POST" action="http://www.iros.go.kr/frontservlet?cmd=RISUWelcomeViewC">
+      <form method="POST" action="http://www.iros.go.kr/frontservlet">
         <fieldset>
           <legend>내가 계약하려는 집이 안전할까?
             <div class="divider-custom divider-light">
@@ -96,7 +96,7 @@
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
               </svg>
             </div>
-            <input id="hdn_txt_simple_address" name ="hdn_txt_simple_address" type="text" placeholder="주소를 입력하세요" />
+            <input id="txt_simple_address" name ="txt_simple_address" type="text" placeholder="주소를 입력하세요" />
           </div>
          <!--<div class="input-field second-wrap">
             <div class="icon-wrap">
@@ -128,6 +128,7 @@
             </select>
           </div>-->
           <div class="input-field fifth-wrap">
+            <input type="submit" value="검색하기">
             <button class="btn-search" type="submit" >SEARCH</button>
           </div>
         </div>
