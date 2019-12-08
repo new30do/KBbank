@@ -17,7 +17,7 @@ from io import StringIO
 from bs4 import BeautifulSoup
 
 
-def makeHtml():
+def makeHtml(): #html 파일생성
     path = "/Users/kang/PycharmProjects/KB/prop.pdf"
     rsrcmgr = PDFResourceManager()
     retstr = StringIO()
@@ -42,7 +42,7 @@ def makeHtml():
     return
 
 
-def calLoan():
+def calLoan(): # 채권채고액 합산
     totalAmt = 0
     with open('/Users/kang/PycharmProjects/KB/out.html') as fp:
         soup = BeautifulSoup(fp, 'html.parser')
@@ -56,7 +56,7 @@ def calLoan():
                 totalAmt += loanAmt
     return totalAmt
 
-def ownerName():
+def ownerName(): #실소유주 확인
     owner = ""
     ownerNumber = ""
     with open('/Users/kang/PycharmProjects/KB/out.html') as fp:

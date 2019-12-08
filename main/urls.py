@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.shortcuts import redirect
 from proptech.views import play
 from proptech.views import main
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('play/', play),
